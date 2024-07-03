@@ -1,0 +1,32 @@
+<?php
+
+namespace Database\Factories;
+use App\Models\Musteriler;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class MusterilerFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Musteriler::class;
+
+
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'adsoyad' => $this->faker->name(),
+            'mail' => $this->faker->unique()->safeEmail(),
+            'telefon' => $this->faker->phoneNumber(),
+
+        ];
+    }
+}
